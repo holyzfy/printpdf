@@ -7,8 +7,8 @@
 
 0. 为了加快安装，国内用户请配置electron下载镜像
 
-    ```
-    npm config set ELECTRON_MIRROR http://npm.taobao.org/mirrors/electron
+    ```bash
+    ELECTRON_MIRROR=http://npm.taobao.org/mirrors/electron ## 配置环境变量
     ```
 0. `npm install`
 
