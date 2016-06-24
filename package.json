@@ -1,7 +1,7 @@
 {
   "name": "pdf",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.1.0",
+  "description": "根据html页面生成pdf",
   "main": "index.js",
   "dependencies": {
     "fs-extra": "^0.30.0",
@@ -13,7 +13,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "pdf"
+  ],
+  "author": "holyzfy <zhaofuyun202@gmail.com>",
   "license": "ISC"
 }

@@ -5,7 +5,11 @@
 
 ## 安装
 
-0. 为了加快安装，国内用户请配置`electron`下载镜像 `npm config set electron-mirror https://npm.taobao.org/mirrors/electron/`
+0. 为了加快安装，国内用户请配置electron下载镜像
+
+    ```
+    npm config set electron-mirror https://npm.taobao.org/mirrors/electron/
+    ```
 0. `npm install`
 
 ## 使用
