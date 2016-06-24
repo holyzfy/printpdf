@@ -3,8 +3,13 @@ var fs = require('fs-extra');
 var argv = require('yargs').argv;
 var File = require('vinyl');
 
+if(!argv.url) {
+    console.error('缺少参数--url')
+    process.exit(1);
+}
+
 var file = new File({
-    path: argv.path
+    path: argv.path || 'dist/' + (new Date).getTime() + '.pdf'
 });
 fs.mkdirsSync(file.dirname);
 
@@ -22,14 +27,14 @@ nightmare
         }
 
         nightmare
-            .wait('canvas')
+            .wait(argv.selector || 0)
             .pdf(file.path, {
                 pageSize: 'A4',
                 printBackground: true
             })
             .end()
             .then(function () {
-                console.log('done');
+                console.log('pdf已生成:', file.path);
             })
             .catch(function (err) {
                 console.error('failed:', err.message);

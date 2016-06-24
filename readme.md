@@ -12,9 +12,10 @@ ELECTRON_MIRROR=https://npm.taobao.org/mirrors/electron npm install
 ## 使用
 
 ```
-node index.js --url url --path path/to/report.pdf
+node index.js --url url --path path/to/report.pdf [--selector selector]
 ```
 
 ### 参数
 - `url`： 需要生成pdf的网址
 - `path`: pdf的保存路径
+- `selector`: css选择器，等这个选择器出现后开始生成pdf
