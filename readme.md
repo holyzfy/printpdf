@@ -6,7 +6,7 @@
 ## 安装
 
 ```
-ELECTRON_MIRROR=https://npm.taobao.org/mirrors/electron npm install
+ELECTRON_MIRROR=https://npm.taobao.org/mirrors/electron/ npm install
 ```
 
 ## 使用
