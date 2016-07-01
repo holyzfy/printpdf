@@ -22,13 +22,13 @@
 - Mac, Win 7
 
     ```
-    node index.js --url url --path path/to/report.pdf [--selector selector]
+    node index.js --url url [--path path] [--selector selector]
     ```
 
 - Ubuntu
 
     ```
-    xvfb-run node index.js --url url --path path/to/report.pdf [--selector selector]
+    xvfb-run node index.js --url url [--path path] [--selector selector]
     ```
 
 参数 | 说明
@@ -36,3 +36,12 @@
 url | 需要生成pdf的网址
 path | pdf的保存路径
 selector | css选择器，等这个选择器出现后开始生成pdf
+
+## 示例
+
+- `node index.js --url https://www.baidu.com/`
+- 调试模式下运行示例：
+    
+    ```
+    DEBUG=nightmare:*,electron:* node index.js --url https://www.baidu.com/
+    ```
