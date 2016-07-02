@@ -8,8 +8,9 @@ if(!argv.url) {
     process.exit(1);
 }
 
+var defaultPath = 'dist/' + (new Date).getTime() + '.pdf';
 var file = new File({
-    path: argv.path || 'dist/' + (new Date).getTime() + '.pdf'
+    path: argv.path || defaultPath
 });
 fs.mkdirsSync(file.dirname);
 
