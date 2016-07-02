@@ -4,7 +4,7 @@ var argv = require('yargs').argv;
 var File = require('vinyl');
 
 if(!argv.url) {
-    console.error('缺少参数--url')
+    console.error('缺少参数--url');
     process.exit(1);
 }
 
@@ -22,22 +22,21 @@ nightmare
     .goto(argv.url)
     .then(function (data) {
         if(data.code !== 200) {
-            console.error('failed: HTTP status=', data.code);
-            return process.exit(1);
+            throw new Error('Failed: HTTP status=' + data.code);
         }
 
-        nightmare
+        return nightmare
             .wait(argv.selector || 0)
             .pdf(file.path, {
                 pageSize: 'A4',
                 printBackground: true
             })
-            .end()
-            .then(function () {
-                console.log('pdf已生成:', file.path);
-            })
-            .catch(function (err) {
-                console.error('failed:', err.message);
-                process.exit(1);
-            });
+            .end();
+    })
+    .then(function () {
+        console.log('pdf已生成:', file.path);
+    })
+    .catch(function (err) {
+        console.error(err.message);
+        process.exit(1);
     });

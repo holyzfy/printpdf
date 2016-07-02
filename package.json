@@ -9,8 +9,11 @@
     "vinyl": "^1.1.1",
     "yargs": "^4.7.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "ghooks": "^1.2.4"
+  },
   "scripts": {
+    "eslint": "files=`git diff --staged --name-only --diff-filter=ACMRTU | grep -ie '\\.js$'`; if [ \"${files:=empty}\" != \"empty\" ]; then eslint -c .eslintrc.json $files; fi",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
