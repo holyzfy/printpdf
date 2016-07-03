@@ -40,7 +40,7 @@ selector | css选择器，等这个选择器出现后开始生成pdf
 ## 示例
 
 - `node index.js --url https://www.baidu.com/`
-- 调试模式下运行示例：
+- 调试模式下运行：
     
     ```
     DEBUG=nightmare:*,electron:* node index.js --url https://www.baidu.com/
