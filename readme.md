@@ -9,13 +9,15 @@
 
 ## 安装
 
-0. `ELECTRON_MIRROR=https://npm.taobao.org/mirrors/electron/ npm install`
-0. 如果使用Ubuntu系统，请安装依赖
-
-    ```
+    如果使用Ubuntu系统，请安装依赖
+    
     sudo apt-get install -y Xvfb libgtk2.0-0 libxtst6 libxss1 libgconf-2-4 libasound2
-    ```
+    
     如果终端提示缺少某个依赖，请在 http://packages.ubuntu.com/ 里查找到相应`软件包内容`并安装
+
+0. 配置环境变量`ELECTRON_MIRROR=https://npm.taobao.org/mirrors/electron/`
+0. 运行`npm install`
+
 
 ## 使用
 
