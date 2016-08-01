@@ -15,7 +15,7 @@ var file = new File({
 fs.mkdirsSync(file.dirname);
 
 var nightmare = Nightmare({
-    waitTimeout: 10000 // ms
+    waitTimeout: argv.timeout // ms
 });
     
 nightmare

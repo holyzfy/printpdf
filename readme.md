@@ -37,7 +37,8 @@
 :--- | :---
 url | 需要生成pdf的网址
 path | pdf的保存路径
-selector | css选择器，等这个选择器出现后开始生成pdf
+selector | css选择器，等这个选择器出现后开始生成pdf，例如`--selector "#chart_done"`
+timeout | 超时时间（单位`ms`），默认30s
 
 ## 示例
 
