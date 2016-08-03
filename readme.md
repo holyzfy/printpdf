@@ -24,14 +24,16 @@
 - Mac, Win 7
 
     ```
-    node index.js --url url [--path path] [--selector selector]
+    node index.js <options>
     ```
 
 - Ubuntu
 
     ```
-    xvfb-run node index.js --url url [--path path] [--selector selector]
+    xvfb-run node index.js <options>
     ```
+
+### options
 
 参数 | 说明
 :--- | :---
