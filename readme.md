@@ -24,14 +24,16 @@
 - Mac, Win 7
 
     ```
-    node index.js --url url [--path path] [--selector selector]
+    node index.js <options>
     ```
 
 - Ubuntu
 
     ```
-    xvfb-run -a -s "-screen 0 1440x900x24" node index.js --url url [--path path] [--selector selector]
+    xvfb-run -a -s "-screen 0 1440x900x24" node index.js <options>
     ```
+
+### options
 
 参数 | 说明
 :--- | :---
