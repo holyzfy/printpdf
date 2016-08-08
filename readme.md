@@ -30,7 +30,7 @@
 - Ubuntu
 
     ```
-    xvfb-run -a -s "-screen 0 1440x900x24" node index.js <options>
+    xvfb-run -a node index.js <options>
     ```
 
 ### options
