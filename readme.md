@@ -30,7 +30,7 @@
 - Ubuntu
 
     ```
-    xvfb-run node index.js --url url [--path path] [--selector selector]
+    xvfb-run -a -s "-screen 0 1440x900x24" node index.js --url url [--path path] [--selector selector]
     ```
 
 参数 | 说明
@@ -48,3 +48,6 @@ timeout | 超时时间（单位`ms`），默认30s
     ```
     DEBUG=nightmare:*,electron:* node index.js --url https://www.baidu.com/
     ```
+## 常见问题
+
+- ubuntu下生成的pdf乱码：安装字体 `sudo apt-get install -y fonts-noto-cjk`
