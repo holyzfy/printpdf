@@ -1,7 +1,7 @@
 var Nightmare = require('nightmare');
 var fs = require('fs-extra');
 var argv = require('yargs').argv;
-var File = require('vinyl');
+var path = require('path');
 
 if(!argv.url) {
     console.error('缺少参数--url');
@@ -9,10 +9,8 @@ if(!argv.url) {
 }
 
 var defaultPath = 'dist/' + (new Date).getTime() + '.pdf';
-var file = new File({
-    path: argv.path || defaultPath
-});
-fs.mkdirsSync(file.dirname);
+var output = path.resolve(argv.path || defaultPath);
+fs.mkdirsSync(path.dirname(output));
 
 var nightmare = Nightmare({
     waitTimeout: argv.timeout // ms
@@ -28,14 +26,14 @@ nightmare
 
         return nightmare
             .wait(argv.selector || 0)
-            .pdf(file.path, {
+            .pdf(output, {
                 pageSize: 'A4',
                 printBackground: true
             })
             .end();
     })
     .then(function () {
-        console.log('pdf已生成:', file.path);
+        console.log('pdf已生成:', output);
     })
     .catch(function (err) {
         console.error(err.message);
