@@ -47,7 +47,7 @@ timeout | 超时时间（单位`ms`），默认30s
 - 调试模式下运行：
     
     ```
-    DEBUG=nightmare:*,electron:* node index.js --url https://www.baidu.com/
+    cross-env DEBUG=nightmare:*,electron:* node index.js --url https://www.baidu.com/
     ```
 ## 常见问题
 
